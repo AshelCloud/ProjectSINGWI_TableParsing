@@ -1,0 +1,16 @@
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.exe
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.deps.json
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.runtimeconfig.json
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.runtimeconfig.dev.json
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.dll
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.pdb
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.csproj.AssemblyReference.cache
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.csproj.ResolveComReference.cache
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.AssemblyInfoInputs.cache
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.AssemblyInfo.cs
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.csproj.CoreCompileInputs.cache
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.dll
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.pdb
+C:\Users\PC5\Desktop\ProjectSINGWI_TableParsing\ProjectSINGWI_TableParsing\obj\Release\netcoreapp3.1\ProjectSINGWI_TableParsing.genruntimeconfig.cache
