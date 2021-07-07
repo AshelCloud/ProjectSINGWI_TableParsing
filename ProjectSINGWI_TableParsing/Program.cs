@@ -30,7 +30,7 @@ namespace ProjectSINGWI_TableParsing
                 {
                     if(str.Contains("typepath"))
                     {
-                        DataPath = args[i + 1];
+                        TypePath = args[i + 1];
                     }
                     else if (str.Contains("datapath"))
                     {

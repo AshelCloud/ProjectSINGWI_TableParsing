@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC5\\Desktop\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj": {}
+    "C:\\Users\\Winter\\Desktop\\Table\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC5\\Desktop\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj": {
+    "C:\\Users\\Winter\\Desktop\\Table\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC5\\Desktop\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj",
+        "projectUniqueName": "C:\\Users\\Winter\\Desktop\\Table\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj",
         "projectName": "ProjectSINGWI_TableParsing",
-        "projectPath": "C:\\Users\\PC5\\Desktop\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj",
-        "packagesPath": "C:\\Users\\PC5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC5\\Desktop\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\obj\\",
+        "projectPath": "C:\\Users\\Winter\\Desktop\\Table\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing.csproj",
+        "packagesPath": "C:\\Users\\Winter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Winter\\Desktop\\Table\\ProjectSINGWI_TableParsing\\ProjectSINGWI_TableParsing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Winter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

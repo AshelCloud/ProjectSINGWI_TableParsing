@@ -12,6 +12,7 @@ namespace ProjectSINGWI_TableParsing
     static class ExcelManager
     {
         static List<string> EnumCheckList = new List<string>();
+        static Dictionary<string, string> EnumDictionary = new Dictionary<string, string>();
         static Excel.Application ExcelApp = null;
 
         public static void Generate(List<string> TypeList, List<string> DataList, string JsonPath, string HeaderPath)
@@ -66,7 +67,7 @@ namespace ProjectSINGWI_TableParsing
 
                     if (2 > Name.Length)
                     {
-                        throw new Exception("Type의 이름 형식이 잘못됐습니다. '_'로 구분할 수 없습니다.");
+                        throw new Exception("Type의 이름 형식이 잘못됐습니다. '_'로 구분할 수 없습니다. : " + _Type.Key);
                     }
 
                     if (Name[0].ToLower().Equals("enum"))
@@ -154,10 +155,11 @@ namespace ProjectSINGWI_TableParsing
         private static Dictionary<string, List<string>> GetTypes(Excel.Range UsedRange)
         {
             Dictionary<string, List<string>> Result = new Dictionary<string, List<string>>();
-            List<string> Values = new List<string>();
 
             for (int column = 2; column <= UsedRange.Columns.Count; column += 2)
             {
+                List<string> Values = new List<string>();
+
                 if ((UsedRange.Cells[1, column] as Excel.Range).Value2 == null)
                 {
                     break;
@@ -209,7 +211,7 @@ namespace ProjectSINGWI_TableParsing
                             }
                             else
                             {
-                                Console.WriteLine("자료형이 float으로 설정됐지만 float으로 형변환을 실패했습니다.");
+                                Console.WriteLine("자료형이 float으로 설정됐지만 float으로 형변환을 실패했습니다. : " + row + "행" + column + "열" + FValue);
                             }
                             break;
                         case "int":
@@ -220,7 +222,7 @@ namespace ProjectSINGWI_TableParsing
                             }
                             else
                             {
-                                Console.WriteLine("자료형이 int로 설정됐지만 int로 형변환을 실패했습니다.");
+                                Console.WriteLine("자료형이 int로 설정됐지만 int로 형변환을 실패했습니다. : " + row + "행" + column + "열" + IValue);
                             }
                             break;
                         default:
@@ -242,6 +244,17 @@ namespace ProjectSINGWI_TableParsing
             Code.AppendLine("#include \"CoreMinimal.h\"");
             Code.AppendFormat("#include \"Type_{0}.generated.h\"", WorksheetName);
             Code.AppendLine("\n");
+
+            foreach(var Variable in Variables)
+            {
+                string TypeValue = ConvertStringTypeToUE4(Variable.Value);
+
+                if (EnumDictionary.ContainsKey(TypeValue.Substring(1)))
+                {
+                    Code.AppendLine(EnumDictionary[TypeValue.Substring(1)]);
+                }
+            }
+
             Code.AppendLine("USTRUCT(Atomic, BlueprintType)");
             Code.AppendFormat("struct FType_{0}", WorksheetName);
             Code.Append("\n");
@@ -254,7 +267,7 @@ namespace ProjectSINGWI_TableParsing
                 string TypeValue = ConvertStringTypeToUE4(Variable.Value);
                 Code.AppendLine("\tUPROPERTY(EditAnywhere, BlueprintReadWrite)");
                 Code.AppendFormat("\t{0} {1};", TypeValue, Variable.Key);
-                Code.Append("\n");
+                Code.AppendLine("\n");
             }
 
             Code.AppendLine("};");
@@ -267,10 +280,8 @@ namespace ProjectSINGWI_TableParsing
         {
             StringBuilder Code = new StringBuilder();
 
-            Code.AppendLine("#pragma once\n");
-            Code.AppendLine("#include \"CoreMinimal.h\"");
-            Code.Append("\n");
-            Code.AppendFormat("enum class E{0}", EnumName);
+            Code.AppendLine("UENUM(BlueprintType)");
+            Code.AppendFormat("enum class E{0} : uint8", EnumName);
             Code.Append("\n");
             Code.AppendLine("{");
 
@@ -283,8 +294,9 @@ namespace ProjectSINGWI_TableParsing
             Code.AppendLine("\t" + EnumProperties[EnumProperties.Count - 1]);
             Code.AppendLine("};");
 
-            string OutputPath = Path + "Type_" + EnumName + ".h";
-            System.IO.File.WriteAllText(OutputPath, Code.ToString());
+            EnumDictionary.Add(EnumName, Code.ToString());
+            //string OutputPath = Path + "Type_" + EnumName + ".h";
+            //System.IO.File.WriteAllText(OutputPath, Code.ToString());
         }
 
         private static string ConvertStringTypeToUE4(string Type)
